@@ -1,0 +1,22 @@
+<!-- Clients -->
+
+  <section class="py-5 page-section" id="history">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">
+            Case History
+          </h2>
+        </div>
+      </div>
+      <div>
+        {% for section in site.sections %}
+          {% if section.title == 'history' %}
+            <div class="text-muted">
+              {{section.content}}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,19 @@
+<section class="bg-light page-section" id="{{ site.data.sitetext.gallery.section | default: "gallery" }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].gallery.title | markdownify | default: "Portfolio" }}</h2>
+            </div>
+    </div>
+    <div class="row" >
+     
+      {% for pic in site.data.sitetext[site.locale].gallery.list %}
+      <div class="col-md-4">
+        <img class="img-fluid d-block mx-auto" src="{{pic.img }}" alt="{{ pic.text }}" >
+     
+      </div>
+  {% endfor %}
+    </div>
+    </div>
+  </div>
+</section>
